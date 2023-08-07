@@ -1,0 +1,59 @@
+<div class="container-fluid">
+    <div class="row mt-5">
+        <div class="col-md-4 offset-md-4">
+            <div class="card">
+                <div class="card-body text-center">
+                    <img src="../../../assets/signup.png" alt="" style="width: 25%; height: auto;">
+                    <form #sign="ngForm" (ngSubmit)="formSubmit(sign.value)">
+                        <div class="row">
+                            <mat-form-field appearance="outline" class="full-width">
+                                <mat-label>Username</mat-label>
+                                <input name="userName" type="text" matInput ngModel type="text"
+                                    placeholder="Enter username here">
+                            </mat-form-field>
+
+                            <mat-form-field appearance="outline" class="full-width">
+                                <mat-label>Password</mat-label>
+                                <input name="password" type="password" matInput ngModel type="password" min="4"
+                                    placeholder="Enter password">
+                            </mat-form-field>
+
+                            <mat-form-field appearance="outline" class="full-width">
+                                <mat-label>First Name</mat-label>
+                                <input name="firstName" type="firstName" matInput ngModel type="text" min="4"
+                                    placeholder="Enter firstName">
+                            </mat-form-field>
+
+                            <mat-form-field appearance="outline" class="full-width">
+                                <mat-label>Last Name</mat-label>
+                                <input name="lastName" type="lastName" matInput ngModel type="text" min="1"
+                                    placeholder="Enter lastName">
+                            </mat-form-field>
+
+                            <mat-form-field appearance="outline" class="full-width">
+                                <mat-label>Email</mat-label>
+                                <input name="email" type="email" matInput ngModel type="text" min="4"
+                                    placeholder="Enter email">
+                            </mat-form-field>
+
+                            <mat-form-field appearance="outline" class="full-width">
+                                <mat-label>Phone number</mat-label>
+                                <input name="phone" type="phone" matInput ngModel type="text" min="4"
+                                    placeholder="Enter phone">
+                            </mat-form-field>
+                        </div>
+                        <div class="row">
+                            <label for="file"></label>
+                            <input ngModel type="file" name="imageURL" accept="image/*" (change)="chooseFile($event)"
+                                style="height: 100%;" />
+                        </div>
+                        <div class="container text-center" style="margin-top: 10px;">
+                            <button type="submit" class="btn btn-success">Register</button>
+                            <button style="margin-left: 10px;" type="reset" class="btn btn-warning">Reset</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<div class="container-fluid">
+    <div class="row mt-5">
+        <div class="col-md-4 offset-md-4">
+            <div class="card">
+                <div class="card-body text-center">
+                    <img src="../../../assets/login.png" alt="" style="width: 35%; height: auto;">
+                    <h1 class="text-center">Login Here!!!</h1>
+                    <h3 *ngIf="errorMessage" class="text-center" style="font-weight: lighter;">{{errorMessage}}</h3>
+                    <!--{{loginData | json}} -->
+                    <form (ngSubmit)="loginFormSubmit()">
+                        <div class="row">
+                            <mat-form-field appearance="outline" class="full-width">
+                                <mat-label>Username</mat-label>
+                                <input [(ngModel)]="loginData.userName" name="username" matInput
+                                    placeholder="Enter username here">
+                            </mat-form-field>
+
+                            <mat-form-field appearance="outline" class="full-width">
+                                <mat-label>Password</mat-label>
+                                <input [(ngModel)]="loginData.passWord" type="password" name="password" matInput
+                                    placeholder="Enter password">
+                            </mat-form-field>
+
+                            <div class="container text-center">
+                                <button type="submit" class="btn btn-primary">Login</button>
+                                <button style="margin-left: 10px;" type="reset"
+                                    class="btn btn-warning">Reset</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
