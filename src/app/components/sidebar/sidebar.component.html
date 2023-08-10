@@ -1,0 +1,56 @@
+<div class="bootsrap-wrapper scrollable">
+    <div class="container-fluid">
+        <div class="row" style="margin-top: 5px;">
+            <mat-card style="margin-top: 5px;" class="scrollable">
+                <mat-action-list>
+                    <div class="row">
+                        <button mat-list-item routerLink="/category">All</button>
+                        <button mat-list-item routerLink="/category?=Electronics">Electronics</button>
+                        <button mat-list-item routerLink="/category?=Mobile&Tabs">Mobile & Tabs</button>
+                        <button mat-list-item routerLink="/category?=Fashion">Fashion</button>
+                        <button mat-list-item routerLink="/category?=Beauty">Beauty</button>
+                        <button mat-list-item routerLink="/category?=Home&Kitchen">Home & Kitchen</button>
+                        <button mat-list-item routerLink="/category?=Kids&Baby">Kids & Baby</button>
+                        <button mat-list-item routerLink="/category?=StudyItems">Study Items</button>
+                        <button mat-list-item routerLink="/category?=Hardware">Hardware</button>
+                        <button *ngIf="isUserLoggedIn" mat-list-item (click)="logoutUser()">Logout</button>
+                    </div>
+                </mat-action-list>
+            </mat-card>
+        </div>
+    </div>
+</div>
+<!-- <mat-nav-list>
+    <div class="logo py-4">
+        <img class="image-fluid rounded-circle" src="../../../assets/cartNavbar.png" alt="">
+    </div>
+    <mat-divider></mat-divider>
+    <h2 matSubheader class="mt-2">Quick Links</h2>
+    <a mat-list-item routerLink="/category" routerLinkActive="list-item-active">
+        <mat-icon>dashboard</mat-icon>
+    </a>
+    <a mat-list-item routerLink="/category?=Electronics" routerLinkActive="list-item-active">
+        <mat-icon>tv_gen</mat-icon>
+    </a>
+    <a mat-list-item routerLink="/category?=Mobile&Tabs" routerLinkActive="list-item-active">
+        <mat-icon>important_devices</mat-icon>
+    </a>
+    <a mat-list-item routerLink="/category?=Fashion" routerLinkActive="list-item-active">
+        <mat-icon>styler</mat-icon>
+    </a>
+    <a mat-list-item routerLink="/category?=Beauty" routerLinkActive="list-item-active">
+        <mat-icon>female</mat-icon>
+    </a>
+    <a mat-list-item routerLink="/category?=Home&Kitchen" routerLinkActive="list-item-active">
+        <mat-icon>flat_ware</mat-icon>
+    </a>
+    <a mat-list-item routerLink="/category?=StudyItems" routerLinkActive="list-item-active">
+        <mat-icon>edit_square</mat-icon>
+    </a>
+    <a mat-list-item routerLink="/category?=Kids&Baby" routerLinkActive="list-item-active">
+        <mat-icon>child_care</mat-icon>
+    </a>
+    <a mat-list-item routerLink="/category?=sports" routerLinkActive="list-item-active">
+        <mat-icon>sports_volleyball</mat-icon>
+    </a>
+</mat-nav-list> -->

@@ -1,0 +1,19 @@
+.dashImgMaxWid {
+    max-width: 150px;
+}
+
+.scrollmenu {
+    width: 100%;
+    overflow: auto;
+    white-space: wrap;
+}
+
+.matchip {
+    display: inline-block;
+}
+
+::ng-deep .mat-chip-list-box-wrapper {
+    flex-wrap: unset !important;
+    width: 100px;
+    overflow-x: scroll;
+  }

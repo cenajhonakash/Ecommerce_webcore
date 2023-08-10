@@ -1,3 +1,8 @@
-.custom-nav-bg{
-    background: #673ab7!important;
+.custom-nav-bg {
+    background: #673ab7 !important;
+}
+
+.valign-center {
+    display: inline-flex;
+    align-items: center;
 }
