@@ -1,18 +1,31 @@
 <div class="container fluid">
     <!--First row-->
-    <div class="row mt-2 scrollmenu">
+    <div class="row mt-2">
         <app-filtermenu></app-filtermenu>
     </div>
     <div class="row mt-3">
         <div class="col-md-4">
             <div class="card">
-                <div class="card-body text-center">
+                <div *ngIf="isAdmin;else normalUser" class="card-body text-center">
                     <div class="container">
                         <img class="image-fluid dashImgMaxWid" src="../../../assets/team.png" alt="users_icon">
                     </div>
                     <h1>1000</h1>
                     <h1 class="text-uppercase text-muted">Users</h1>
                 </div>
+                <ng-template #normalUser>
+                    <div class="card-body text-center">
+                        <div class="container">
+                            <img *ngIf="isMale" class="image-fluid dashImgMaxWid" src="../../../assets/maleAvatar.jpg"
+                                alt="users_icon">
+                            <img *ngIf="!isMale" class="image-fluid dashImgMaxWid" src="../../../assets/female.png"
+                                alt="users_icon">
+                        </div>
+                        <!-- <h1>1000</h1> -->
+                        <p class="mt-3"><b>Maintain your profile here</b></p>
+                        <h1 class="text-uppercase text-muted">Profile</h1>
+                    </div>
+                </ng-template>
             </div>
         </div>
         <div class="col-md-4">
@@ -46,7 +59,7 @@
                     <div class="container">
                         <img class="image-fluid dashImgMaxWid" src="../../../assets/add-button.png" alt="users_icon">
                     </div>
-                    <p class="mt-3">Click here to add products, categories etc.</p>
+                    <p class="mt-3"><b>Add products, categories, person in group etc.</b></p>
                     <h1 class="text-uppercase text-muted">ADD</h1>
                 </div>
             </div>
@@ -68,7 +81,7 @@
                     <div class="container">
                         <img class="image-fluid dashImgMaxWid" src="../../../assets/budget.png" alt="users_icon">
                     </div>
-                    <p class="mt-3">Click here to proceed with calculations..</p>
+                    <p class="mt-3"><b>Click here to proceed with calculations..</b></p>
                     <h1 class="text-uppercase text-muted">Calculation</h1>
                 </div>
             </div>

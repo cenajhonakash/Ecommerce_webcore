@@ -10,7 +10,7 @@
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li> -->
         <li class="nav-item">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" [routerLink]="''">
             <img class="image-fluid rounded-circle" src="../../../assets/cartNavbar.png" alt=""
               style="width: 50%; height: auto;">
           </a>
@@ -52,7 +52,7 @@
   </div>
 </nav>
 <mat-menu #navDropdown="matMenu">
-  <button mat-menu-item [routerLink]="'/signup'">New Customer ?</button>
+  <button mat-menu-item [routerLink]="'/signup'"><b>New Customer ?</b></button>
   <button mat-menu-item [routerLink]="'/my-orders'">Orders</button>
   <button mat-menu-item [routerLink]="'/whislist'">Wishlist</button>
 </mat-menu>

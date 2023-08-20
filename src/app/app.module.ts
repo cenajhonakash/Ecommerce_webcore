@@ -28,6 +28,8 @@ import { DefaultDashComponent } from './pages/default-dash/default-dash.componen
 import { MatChipsModule } from '@angular/material/chips';
 import { FiltermenuComponent } from './components/filtermenu/filtermenu.component';
 import { ProdcutListComponent } from './pages/prodcut-list/prodcut-list.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { SharedDatService } from './services/sharedDataService';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,8 @@ import { ProdcutListComponent } from './pages/prodcut-list/prodcut-list.componen
     SidebarComponent,
     DefaultDashComponent,
     FiltermenuComponent,
-    ProdcutListComponent
+    ProdcutListComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -62,7 +65,7 @@ import { ProdcutListComponent } from './pages/prodcut-list/prodcut-list.componen
     MatSidenavModule,
     MatChipsModule
   ],
-  providers: [],
+  providers: [SharedDatService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

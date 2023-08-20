@@ -1,5 +1,10 @@
 <mat-chip-listbox aria-label="Fish selection">
-    <mat-chip-option *ngFor="let c of slicedCategory">{{c}}</mat-chip-option>
-    <mat-chip *ngIf="slicedCategory.length >= 9">
-        <a href="#" (click)="onClick()" style="text-decoration: none;">{{defaultLinkTitle}}</a></mat-chip>
+    <mat-chip-option *ngFor="let c of slicedCategory">
+        <a (click)="onMenuClick(c)" style="text-decoration: none; color: black;">{{c}}</a>
+    </mat-chip-option>
+    <mat-chip *ngIf="slicedCategory.length >= 9" style="background-color: grey;">
+        <a href="#" (click)="onClick()" style="text-decoration: none; color: whitesmoke;">{{defaultLinkTitle}}</a></mat-chip>
 </mat-chip-listbox>
+<div class="container-fluid">
+    
+</div>

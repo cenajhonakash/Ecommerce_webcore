@@ -7,14 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  isAdmin: any = true;
+  isAdmin: any = false;
+  isMale: any = false;
   isExpanded: any = false;
   categories: string[] = ["All", "Electronics", "Mobile & Tabs", "Fashion", "Beauty", "Home & Kitchen", "Kids & Baby", "Study Items", "Hardware",
     "All", "Electronics", "Mobile & Tabs", "Fashion", "Beauty", "Home & Kitchen", "Kids & Baby", "Study Items", "Hardware",
     "All", "Electronics", "Mobile & Tabs", "Fashion", "Beauty", "Home & Kitchen", "Kids & Baby", "Study Items", "Hardware",
     "All", "Electronics", "Mobile & Tabs", "Fashion", "Beauty", "Home & Kitchen", "Kids & Baby", "Study Items", "Hardware"];
   slicedCategory: string[] = [];
-  defaultLinkTitle="showMore";
+  defaultLinkTitle = "showMore";
   expand: any = true
   ngOnInit(): void {
     this.slicedCategory = this.categories.slice(0, 9)
@@ -24,10 +25,10 @@ export class DashboardComponent implements OnInit {
       this.defaultLinkTitle = "showLess"
       this.slicedCategory = this.categories
       this.expand = false
-    }else{
+    } else {
       this.defaultLinkTitle = "showMore"
       this.slicedCategory = this.categories.slice(0, 9)
-      this.expand=true
+      this.expand = true
     }
   }
 }
